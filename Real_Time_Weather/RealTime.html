@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Metadata and Head Section -->
+  <head>
+    <meta charset="UTF-8" /> <!-- Character encoding set to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive design for all devices -->
+    <title>Live Weather Tracker</title> <!-- Page title -->
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css" /> <!-- Link to the external stylesheet -->
+    
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    /> <!-- Importing the "Poppins" font family -->
+  </head>
+
+  <!-- Body Section -->
+  <body>
+    <!-- Container for the app -->
+    <div class="app-container">
+      <!-- Header Section -->
+      <header class="app-header">
+        <h1>Weather Now</h1> <!-- Main heading of the app -->
+        <p><b>Real-Time Updates</b></p> <!-- Subheading for additional description -->
+      </header>
+
+      <!-- Weather Display Section -->
+      <section class="weather-section">
+        <!-- Weather Card -->
+        <div class="weather-card">
+          <!-- Weather Main Information -->
+          <div class="weather-main">
+            <!-- Weather Icon -->
+            <img
+              src="Image.jpg"
+              alt="Weather Icon"
+              class="weather-icon"
+              style="width: 80px; height: 80px" 
+            />
+            <div class="temperature">20°C</div> <!-- Displaying temperature -->
+          </div>
+
+          <!-- Weather Details -->
+          <div class="weather-details">
+            <p class="location">📍 <strong>New York City</strong></p> <!-- Displaying location -->
+            <p class="time">🕒 Nov 29, 2024 | 10:00 AM</p> <!-- Displaying date and time -->
+            <p class="condition">☀️ Sunny</p> <!-- Displaying weather condition -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Search Section -->
+      <section class="search-section">
+        <!-- Search Form -->
+        <form class="search-form">
+          <!-- Input Field -->
+          <div style="text-align: center;">
+            <input
+              type="text"
+              placeholder="Search city or location..."
+              class="searchInput"
+              style="width: 70%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc;"
+            />
+          </div>
+          
+          <!-- Search Button -->
+          <div style="text-align: center; margin-top: 10px;">
+            <button
+              type="submit"
+              class="search-button"
+              style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Search
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Footer Section -->
+      <footer class="app-footer" style="text-align: center; margin-top: 20px;">
+        <p>&copy; 2024-2025 Weather Now | All Rights Reserved</p> <!-- Copyright notice -->
+      </footer>
+    </div>
+  </body>
+
+  <!-- Link to External JavaScript -->
+  <script src="script.js"></script> <!-- Linking to the JavaScript file for interactivity -->
+</html>

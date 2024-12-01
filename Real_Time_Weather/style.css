@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+  margin: 0; /* Remove default margin around the body */
+  font-family: 'Poppins', sans-serif; /* Set font family to Poppins */
+  background: linear-gradient(to bottom, #196797, #a1b3c4); /* Create a gradient background */
+  color: #333; /* Set default text color */
+  text-align: center; /* Center-align text */
+}
+
+.app-container {
+  max-width: 800px; /* Limit the maximum width of the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add padding inside the container */
+}
+
+/* Header */
+.app-header {
+  margin-bottom: 20px; /* Add space below the header */
+}
+
+.app-header h1 {
+  font-size: 2.5rem; /* Set font size for the main title */
+  margin: 0; /* Remove default margin */
+  color: rgb(4, 4, 37); /* Set color for the title */
+}
+
+.app-header p {
+  font-size: 1.5rem; /* Set font size for the subheading */
+  color: rgb(15, 6, 6); /* Set color for the subheading */
+}
+
+/* Weather Display Section */
+.weather-section {
+  margin: 20px 0; /* Add space above and below the section */
+  padding: 20px; /* Add padding inside the section */
+  border-radius: 10px; /* Round the corners of the section */
+  background-color: #ffffffdd; /* Semi-transparent white background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+}
+
+.weather-card {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.weather-main {
+  display: flex; /* Use flexbox for weather main section */
+  align-items: center; /* Center items vertically */
+  gap: 20px; /* Add space between items */
+}
+
+.weather-icon {
+  width: 100px; /* Set icon width */
+  height: 100px; /* Set icon height */
+}
+
+.temperature {
+  font-size: 2rem; /* Set font size for temperature */
+  font-weight: bold; /* Make the font bold */
+  color: #ff4500; /* Set temperature text color */
+}
+
+.weather-details p {
+  margin: 5px 0; /* Add margin to paragraphs */
+  font-size: 1rem; /* Set font size for weather details */
+}
+
+/* Search Section */
+.search-section {
+  margin-top: 30px; /* Add space above the search section */
+}
+
+.searchInput {
+  width: 80%; /* Set the input width */
+  padding: 12px; /* Add padding inside the input */
+  font-size: 16px; /* Set font size */
+  border-radius: 5px; /* Round the input corners */
+  border: 1px solid #ccc; /* Add a border with a light color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow effect */
+  transition: all 0.3s ease; /* Smooth transition effect for focus */
+}
+
+.searchInput:focus {
+  outline: none; /* Remove default outline on focus */
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Add blue glow effect on focus */
+}
+
+.search-button {
+  margin-top: 10px; /* Add space above the button */
+  padding: 10px 20px; /* Add padding inside the button */
+  font-size: 16px; /* Set font size for the button text */
+  background-color: #007bff; /* Set background color */
+  color: white; /* Set text color to white */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Round the button corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition effect for background color */
+}
+
+.search-button:hover {
+  background-color: #0056b3; /* Darken background color on hover */
+}
+
+/* Footer */
+.app-footer {
+  margin-top: 30px; /* Add space above the footer */
+  font-size: 0.9rem; /* Set font size for footer */
+  color: #202020; /* Set text color for footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .temperature {
+    font-size: 1.8rem; /* Adjust font size for temperature on smaller screens */
+  }
+
+  .weather-icon {
+    width: 80px; /* Adjust icon size for smaller screens */
+    height: 80px; /* Adjust icon size for smaller screens */
+  }
+
+  .searchInput {
+    width: 90%; /* Adjust input width for smaller screens */
+  }
+
+  .search-button {
+    width: 90%; /* Adjust button width for smaller screens */
+  }
+}
