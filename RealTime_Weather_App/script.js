@@ -7,7 +7,7 @@ const weatherCondition = document.querySelector(".weather-details .condition"); 
 const form = document.querySelector(".search-form"); // Form element for searching a location
 const searchInput = document.querySelector(".searchInput"); // Input field for entering location
 
-let target = "Pune"; // Default location to fetch weather for
+let target = "Bangalore"; // Default location to fetch weather for
 
 // Function to fetch weather data from the API
 async function fetchData(target) {
