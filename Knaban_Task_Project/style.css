@@ -1,0 +1,264 @@
+/* Global reset and basic settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Arial', sans-serif;
+  background-color: #1E1E1E;
+  color: #e0e0e0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background-color: #2C2C2C;
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 2px solid #FF5722; /* Accent color */
+}
+
+/* Toolbox container */
+.toolbox-cont {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+  z-index: 100;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Filter Colors */
+.toolbox-filter-colors {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.color-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.color-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Color scheme */
+.lightpink { background-color: #FF6F61; }
+.lightgreen { background-color: #66BB6A; }
+.lightblue { background-color: #42A5F5; }
+.black { background-color: #424242; }
+
+/* Action Buttons */
+.action-btn-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-btn, .remove-btn {
+  width: 60px;
+  height: 60px;
+  background-color: #FF5722; /* Primary color */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: scale(1.1);
+  background-color: #FF3D00; /* Lighter shade on hover */
+}
+
+.remove-btn:hover {
+  transform: scale(1.1);
+  background-color: #D32F2F;
+}
+
+/* Main container */
+.main-cont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+/* Ticket container */
+.ticket-cont {
+  width: 280px;
+  height: 300px;
+  background-color: #2C2C2C;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ticket-cont:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4);
+}
+
+.ticket-color {
+  height: 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.ticket-id {
+  font-size: 14px;
+  color: #B0BEC5;
+}
+
+.task-area {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+/* Modal container */
+.modal-cont {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  transition: all 0.3s ease;
+}
+
+.text-area {
+  width: 400px;
+  height: 150px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #444;
+  font-size: 16px;
+  color: #f1f1f1;
+  background-color: #333;
+  margin-bottom: 20px;
+  resize: none;
+}
+
+.priority-color-cont {
+  display: flex;
+  gap: 12px;
+}
+
+.priority-color {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.priority-color.active {
+  transform: scale(1.2); /* Highlight active color */
+}
+
+.lightpink.priority-color { background-color: #FF6F61; }
+.lightgreen.priority-color { background-color: #66BB6A; }
+.lightblue.priority-color { background-color: #42A5F5; }
+.black.priority-color { background-color: #424242; }
+
+/* Modal show animation */
+.modal-cont.show {
+  display: flex;
+}
+
+/* Footer */
+footer {
+  background-color: #2C2C2C;
+  color: #B0BEC5;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .main-cont {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .ticket-cont {
+    width: 100%;
+    height: auto;
+  }
+
+  .toolbox-cont {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    gap: 15px;
+  }
+
+  .add-btn, .remove-btn {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Header Styles */
+header {
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  background-color: #121212;
+  color: white;
+  padding: 20px;
+  height: 100vh; /* Full viewport height to center vertically */
+}
+
+/* Logo Styles */
+.logo img {
+  width: 100px;  /* Adjust width of the logo */
+  height: auto;  /* Maintain aspect ratio */
+  filter: brightness(0.7); /* Lightens the logo image */
+  margin-right: 15px;
+}
+
+/* Optional: Add text styles */
+p {
+  color: white;
+  font-size: 20px;
+}
