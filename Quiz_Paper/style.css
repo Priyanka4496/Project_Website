@@ -1,0 +1,510 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --primary-bg: #121212; /* Deep Dark Background */
+    --secondary-bg: #1E1E1E; /* Slightly Lighter Background */
+    --primary-color: #00ADB5; /* Neon Cyan for Highlights */
+    --text-color: #EAEAEA; /* Light Text Color for Contrast */
+    --correct-bg: #006a4e; /* Dark Green for Correct Answers */
+    --wrong-bg: #a83232; /* Dark Red for Incorrect Answers */
+    --shadow: 0 6px 20px rgba(0, 255, 255, 0.3); /* Glowing Shadow */
+    --accent-color: #ff4081; /* Vibrant Accent Color for Interactive Elements */
+}
+
+/* Body */
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* Quiz Container */
+.quiz {
+    background: var(--secondary-bg);
+    padding: 50px 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    max-width: 900px;
+    margin: auto;
+    border: 1px solid var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="radio"] {
+    display: inline-block;
+    margin-right: 10px;
+    accent-color: #F39C12;
+}
+
+.quiz:hover {
+    transform: translateY(-3px);
+}
+
+/* Quiz Heading */
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.heading .title {
+    font-size: 36px;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+}
+
+/* Subtitle */
+.heading .subtitle {
+    font-size: 20px;
+    color: var(--text-color);
+    font-weight: 300;
+    opacity: 0.85;
+    
+}
+
+/* Result Box */
+.result {
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    margin: 20px auto;
+    border-radius: 12px;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--primary-color);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    
+}
+
+.result:hover {
+    transform: scale(1.05);
+}
+
+/* Hide Element */
+.hide {
+    display: none;
+}
+
+/* Reload Button */
+.reload button {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 14px 25px;
+    font-size: 18px;
+    border-radius: 0 0 12px 12px;
+    width: 100%;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.reload button:hover {
+    background-color: #008b94;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00adb5;
+}
+
+/* Quiz Form */
+.quiz-form {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Question Box */
+.question {
+    background-color: var(--secondary-bg);
+    padding: 20px 25px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border: 1px solid var(--primary-color);
+    box-shadow: var(--shadow);
+    transition: 0.3s ease-in-out;
+}
+
+.question:hover {
+    transform: translateY(-5px);
+}
+
+.question > * {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    
+}
+
+.option {
+    margin-left: 20px;
+    color: var(--text-color);
+    
+}
+
+/* Correct & Wrong Answers */
+.correct {
+    background-color: var(--correct-bg);
+    color: #ffffff;
+    border-left: 8px solid #bce9d2;
+    padding-left: 15px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+}
+
+.wrong {
+    background-color: var(--wrong-bg);
+    color: #fff;
+    border-left: 8px solid #d58a6f;
+    padding-left: 15px;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+/* Submit Button */
+.submit {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.submit input {
+    background: linear-gradient(135deg, var(--primary-color), #008b94);
+    padding: 14px 35px;
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.submit input:hover {
+    background: linear-gradient(135deg, #008b94, #00757f);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .quiz {
+        padding: 40px;
+    }
+
+    .heading .title {
+        font-size: 30px;
+    }
+
+    .heading .subtitle {
+        font-size: 18px;
+    }
+
+    .result {
+        width: 100%;
+    }
+
+    .question {
+        padding: 15px 20px;
+    }
+
+    .submit input {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #121212; /* Dark background */
+    color: #EAEAEA; /* Light text color for contrast */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #00ADB5; /* Accent border at the top */
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+/* Hover effect on footer text */
+footer p:hover {
+    color: #00ADB5; /* Highlight the text with accent color on hover */
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+
+
+/* Star Rating */
+
+/* Rating Styles */
+.rating {
+    background-color: #1E1E1E; /* Dark background */
+    color: #EAEAEA; /* Light text color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Star Container */
+#stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* Comment Box */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container Styles */
+#commentForm {
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin: 30px auto;
+    color: #EAEAEA;
+}
+
+#commentInput {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #2C2C2C;
+    color: #EAEAEA;
+    border: 1px solid #444;
+    font-size: 16px;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+#commentInput::placeholder {
+    color: #888;
+}
+
+#commentInput:focus {
+    border-color: #00ADB5;
+    outline: none;
+    background-color: #353535;
+}
+
+#submitComment {
+    background-color: #00ADB5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#submitComment:hover {
+    background-color: #008f8a;
+}
+
+/* Comments Container */
+#commentsContainer {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Individual Comment */
+.comment {
+    background-color: #2C2C2C;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.comment p {
+    font-size: 16px;
+    color: #EAEAEA;
+}
+
+.comment .replyBtn {
+    background-color: #00ADB5;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.comment .replyBtn:hover {
+    background-color: #008f8a;
+}
+
+/* Reply Input */
+.replyInput {
+    display: none;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #353535;
+    color: #EAEAEA;
+    border: 1px solid #444;
+    font-size: 14px;
+    margin-top: 10px;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+.replyInput:focus {
+    border-color: #00ADB5;
+    background-color: #444;
+    outline: none;
+}
+
+.replyInput::placeholder {
+    color: #888;
+}
+
+/* Show reply input on click */
+.showReply .replyInput {
+    display: block;
+}
+
+/* Replies Container */
+.repliesContainer {
+    margin-left: 20px;
+    background-color: #353535;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.repliesContainer p {
+    color: #EAEAEA;
+    font-size: 15px;
+}
+
+.repliesContainer .replyBtn {
+    background-color: #008f8a;
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+.repliesContainer .replyBtn:hover {
+    background-color: #006f6a;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #commentForm {
+        padding: 15px;
+    }
+
+    #commentInput {
+        height: 80px;
+        font-size: 14px;
+    }
+
+    #submitComment {
+        padding: 8px 16px;
+    }
+
+    .comment {
+        padding: 12px;
+    }
+
+    .replyInput {
+        height: 50px;
+        font-size: 12px;
+    }
+}
+
+
+/* Star Style */
+.star {
+    font-size: 30px;
+    color: #555; /* Default inactive color */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Filled Star (Active) */
+.star.filled {
+    color: #00ADB5; /* Active star color */
+}
+
+/* Hover Effect for Stars */
+.star:hover,
+.star.filled {
+    color: #00ADB5; /* Active star color */
+}
+
+/* Rating Text */
+p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #EAEAEA;
+    margin-top: 10px;
+}
+
+/* Highlighted Rating Number */
+#rating {
+    color: #00ADB5; /* Accent color for rating number */
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .rating {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .star {
+        font-size: 25px;
+    }
+}

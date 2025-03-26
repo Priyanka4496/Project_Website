@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scaler Quiz App  Daily Quiz To Test Your JavaScript Knowledge</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main>
+        <section class="quiz">
+            <div class="heading">
+                <p class="title">Best Quiz</p><br>
+                <p class="subtitle">Daily Quiz To Test Your JavaScript Knowledge!</p>
+            </div>
+
+            <div class="result hide">
+                <p class="score-result"></p>
+                <p class="reload">
+                    <br>
+                    <button onclick="document.location.reload(true)">Try Again?</button>
+                </p>
+            </div>
+
+            <form class="quiz-form">
+                <div class="question">
+                    <p>1. Inside which HTML element do we put the JavaScript?</p>
+                    <div class="option">
+                        <input type="radio" name="q1" id="" value="A" checked>
+                        <label for="">js</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="" value="B">
+                        <label for="">javascript</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="" value="C">
+                        <label for="">scripting</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="" value="D">
+                        <label for="">script</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. Where is the correct place to insert a JavaScript file?</p>
+                    <div class="option">
+                        <input type="radio" name="q2" id="" value="A" checked>
+                        <label for="">Inside head section</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="" value="B">
+                        <label for="">At the end of body section</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="" value="C">
+                        <label for="">After body section</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="" value="D">
+                        <label for="">None</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>3. What is the correct syntax for referring to an external script called "index.js"?</p>
+                    <div class="option">
+                        <input type="radio" name="q3" id="" value="A" checked>
+                        <label for="">&#60;script name="index.js"&#62;</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="" value="B">
+                        <label for="">&#60;script href="index.js"&#62;</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="" value="C">
+                        <label for="">&#60;script src="index.js"&#62;</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="" value="D">
+                        <label for="">All</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>4. How do you write "Hello World" in an alert box?</p>
+                    <div class="option">
+                        <input type="radio" name="q4" id="" value="A" checked>
+                        <label for="">pop("Hello World");</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="" value="B">
+                        <label for="">alert("Hello World");</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="" value="C">
+                        <label for="">popUp("Hello World");</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" id="" value="D">
+                        <label for="">alertUp("Hello World");</label>
+                    </div>
+                </div>
+
+                    <div class="question">
+                        <p>5. Which operator is used to assign a value to a variable?</p>
+                        <div class="option">
+                            <input type="radio" name="q5" id="" value="A" checked>
+                            <label for="">-</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="q5" id="" value="B">
+                            <label for="">*</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="q5" id="" value="C">
+                            <label for="">+</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="q5" id="" value="D">
+                            <label for="">=</label>
+                        </div>
+                </div>
+
+                <div class="question">
+                    <p>6. When an operator's value is NULL, the typeof returned by the unary operator is?</p>
+                    <div class="option">
+                        <input type="radio" name="q6" id="" value="A" checked>
+                        <label for="">Boolean</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="" value="B">
+                        <label for="">Object</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="" value="C">
+                        <label for="">Undefined</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" id="" value="D">
+                        <label for="">Integer</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>7. Which function is used to serialize an object into a JSON string in Javascript?</p>
+                    <div class="option">
+                        <input type="radio" name="q7" id="" value="A" checked>
+                        <label for="">Parse()</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="" value="B">
+                        <label for="">Stringify()</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="" value="C">
+                        <label for="">Convert()</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" id="" value="D">
+                        <label for="">None of above</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>8. Which of the following are closures in Javascript?</p>
+                    <div class="option">
+                        <input type="radio" name="q8" id="" value="A" checked>
+                        <label for="">Functions</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="" value="B">
+                        <label for="">Variables</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="" value="C">
+                        <label for="">Objects</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" id="" value="D">
+                        <label for="">All of above</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>9. Which of the following are not server-side Javascript objects?</p>
+                    <div class="option">
+                        <input type="radio" name="q9" id="" value="A" checked>
+                        <label for="">Date</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="" value="B">
+                        <label for="">File Uploaded</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="" value="C">
+                        <label for="">Objects</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q9" id="" value="D">
+                        <label for="">All of above</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>10. Which of the following is not a Javascript framework?</p>
+                    <div class="option">
+                        <input type="radio" name="q10" id="" value="A" checked>
+                        <label for="">Node</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="" value="B">
+                        <label for="">Vue</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="" value="C">
+                        <label for="">React</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q10" id="" value="D">
+                        <label for="">Cassandra</label>
+                    </div>
+                </div>
+
+
+                <div class="submit">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </section>
+    </main>
+    <br>
+
+    <div id="commentForm">
+        <textarea id="commentInput" placeholder="Write a comment ..."></textarea>
+        <button id="submitComment">Comment</button>
+      </div>
+      <div id="commentsContainer">
+        <!-- <div class="repliesContainer">
+             <p>Some Comment</p>
+             <button class="replyBtn">Reply</button>
+             <textArea class="replyInput" placeholder="Write a reply ..."></textArea>
+             <div class="repliesContainer">
+                 <p>Some other Comment</p>
+                 <button class="replyBtn">Reply</button>
+                 <textArea class="replyInput" placeholder="Write a reply ..."></textArea>
+             </div>
+         </div>
+         <div class="repliesContainer">
+             <p>Some Comment</p>
+             <button class="replyBtn">Reply</button>
+             <textArea class="replyInput" placeholder="Write a reply ..."></textArea>
+         </div> -->
+      </div>
+
+    <br>
+    <div class="rating">
+        <div id="stars">
+            <span class="star" data-value="1">&#9733</span>
+            <span class="star" data-value="2">&#9733</span>
+            <span class="star" data-value="3">&#9733</span>
+            <span class="star" data-value="4">&#9733</span>
+            <span class="star" data-value="5">&#9733</span>
+        </div>
+        <p>Rating: <span id="rating">0</span>/5</p>
+    </div>
+    <br>
+
+    <footer>
+        <p>&copy; 2025 Priyanka Modi. All rights reserved.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
